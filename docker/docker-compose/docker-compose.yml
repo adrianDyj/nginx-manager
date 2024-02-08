@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  scriptorium-nginx:
+    container_name: scriptorium-nginx
+    image: scriptorium-nginx
+    ports:
+      - 80:80
+    networks:
+      - docker-compose_scriptorium-network-001
+
+networks:
+  docker-compose_scriptorium-network-001:
+    external: true
